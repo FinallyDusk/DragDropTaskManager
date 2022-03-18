@@ -1,0 +1,66 @@
+@import '../../../theme';
+
+@mixin baseStyle($color) {
+    width: 100%;
+    min-width: 138px;
+    height: 100%;
+    max-height: 645px;
+    padding: 0 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    .headerItem {
+        $lineHeight: 22px;
+        padding: 0 5px;
+        background-color: $color;
+        text-align: center;
+        line-height: $lineHeight;
+        @include font_normal;
+        height: $lineHeight;
+    }
+    .mainItem {
+        height: calc(90% - 20px);
+        padding: 10px 0 0 0;
+        background-color: $color;
+        margin-top: 20px;
+        text-align: center;
+        overflow: auto;
+        div {
+           width: 100%; 
+           position: relative;
+           padding: 0 10px;
+           box-sizing: border-box;
+           input {
+               width: 100%;
+               margin: 0;
+               padding: 0;
+               text-align: center;
+            //    height: 15px;
+            //    line-height: 15px;
+           }
+           .delIconBtn {
+               $size: 16px;
+               width: $size;
+               height: $size;
+               position: absolute;
+               margin: 0;
+               padding: 0;
+               top: ($size / -2 + 2px);
+               right: ($size / -2 + 9px);
+           }
+        }
+        .addDataItemBtn {
+            margin-top: 10px;
+        }
+    }
+} 
+
+.borderLeft{
+    @include baseStyle(#eedcdc);
+}
+.borderMiddle{
+    @include baseStyle(#9cd28e);
+}
+.borderRight{
+    @include baseStyle(#dddddd);
+}

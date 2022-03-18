@@ -1,0 +1,5 @@
+// 一般字体的大小
+@mixin font_normal($size: 1em, $weight: bold) {
+    font-size: $size;
+    font-weight: bold;
+}
